@@ -21,12 +21,12 @@ const navHTML = `<header class="sticky top-0 z-50 w-full border-b border-slate-2
 </nav>
 <div class="flex items-center gap-4">
 <a href="contact.html" class="hidden md:inline-block bg-primary text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-primary/90 transition-all shadow-md shadow-primary/20">Contact Us</a>
-<button onclick="toggleMobileMenu()" class="md:hidden text-slate-700 dark:text-slate-200 p-2">
+<button id="menu-toggle" class="md:hidden text-slate-700 dark:text-slate-200 p-2 z-50">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
 </div>
-<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 shadow-lg">
+<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 shadow-lg z-40">
 <nav class="flex flex-col p-4 space-y-2">
 <a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors py-3 px-4 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" href="index.html">Home</a>
 <a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors py-3 px-4 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" href="about.html">About</a>
@@ -107,11 +107,6 @@ const footerHTML = `<footer class="border-t border-slate-200 dark:border-slate-8
 </div>
 </footer>`;
 
-function toggleMobileMenu() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('nav-placeholder').innerHTML = navHTML;
     document.getElementById('footer-placeholder').innerHTML = footerHTML;
@@ -124,4 +119,21 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.remove('text-slate-700', 'dark:text-slate-200');
         }
     });
+
+    // Mobile menu toggle with console log
+    setTimeout(() => {
+        const menuBtn = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', function() {
+                console.log('Menu button clicked!');
+                mobileMenu.classList.toggle('hidden');
+                console.log('Menu is now:', mobileMenu.classList.contains('hidden') ? 'hidden' : 'visible');
+            });
+            console.log('Mobile menu initialized successfully');
+        } else {
+            console.error('Menu elements not found');
+        }
+    }, 100);
 });
