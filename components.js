@@ -20,11 +20,21 @@ const navHTML = `<header class="sticky top-0 z-50 w-full border-b border-slate-2
 <a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="team.html">Team</a>
 </nav>
 <div class="flex items-center gap-4">
-<a href="contact.html" class="bg-primary text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-primary/90 transition-all shadow-md shadow-primary/20">Contact Us</a>
-<button class="md:hidden text-slate-700 dark:text-slate-200">
+<a href="contact.html" class="hidden md:inline-block bg-primary text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-primary/90 transition-all shadow-md shadow-primary/20">Contact Us</a>
+<button id="mobile-menu-btn" class="md:hidden text-slate-700 dark:text-slate-200">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white dark:bg-background-dark border-b border-slate-200 dark:border-slate-800 shadow-lg">
+<nav class="flex flex-col p-4 space-y-2">
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors py-3 px-4 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" href="index.html">Home</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors py-3 px-4 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" href="about.html">About</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors py-3 px-4 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" href="events.html">Events</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors py-3 px-4 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" href="foundation.html">Foundation</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors py-3 px-4 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800" href="team.html">Team</a>
+<a class="bg-primary text-white text-sm font-bold py-3 px-4 rounded-lg hover:bg-primary/90 transition-all text-center" href="contact.html">Contact Us</a>
+</nav>
 </div>
 </header>`;
 
@@ -108,5 +118,12 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('text-primary', 'font-bold');
             link.classList.remove('text-slate-700', 'dark:text-slate-200');
         }
+    });
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
     });
 });
