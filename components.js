@@ -21,7 +21,7 @@ const navHTML = `<header class="sticky top-0 z-50 w-full border-b border-slate-2
 </nav>
 <div class="flex items-center gap-4">
 <a href="contact.html" class="hidden md:inline-block bg-primary text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-primary/90 transition-all shadow-md shadow-primary/20">Contact Us</a>
-<button id="mobile-menu-btn" class="md:hidden text-slate-700 dark:text-slate-200">
+<button onclick="toggleMobileMenu()" class="md:hidden text-slate-700 dark:text-slate-200 p-2">
 <span class="material-symbols-outlined">menu</span>
 </button>
 </div>
@@ -107,6 +107,11 @@ const footerHTML = `<footer class="border-t border-slate-200 dark:border-slate-8
 </div>
 </footer>`;
 
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    menu.classList.toggle('hidden');
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('nav-placeholder').innerHTML = navHTML;
     document.getElementById('footer-placeholder').innerHTML = footerHTML;
@@ -118,12 +123,5 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('text-primary', 'font-bold');
             link.classList.remove('text-slate-700', 'dark:text-slate-200');
         }
-    });
-
-    // Mobile menu toggle
-    const menuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
     });
 });
