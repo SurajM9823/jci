@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Events &amp; Activities | JCI Local Chapter</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#195de6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div id="nav-placeholder"></div>
+<!-- Navigation -->
+<header style="display:none" class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-6 md:px-20 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-6">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">JCI Local</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Home</a>
+<a class="text-primary text-sm font-semibold border-b-2 border-primary pb-1" href="#">Events</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Projects</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">About</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:block">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+<input class="w-64 bg-slate-100 dark:bg-slate-800 border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary outline-none" placeholder="Search events..."/>
+</div>
+</div>
+<button class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<div class="size-9 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
+<span class="material-symbols-outlined">person</span>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-10 px-6 md:px-20">
+<div class="layout-content-container flex flex-col max-w-[1100px] flex-1">
+<!-- Hero Section -->
+<div class="flex flex-col gap-4 mb-10">
+<h1 class="text-slate-900 dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">Events &amp; Activities</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl leading-relaxed">
+                            Empowering young active citizens through impactful leadership summits, community-driven projects, and professional networking opportunities.
+                        </p>
+</div>
+<!-- Tabs/Filter -->
+<div class="mb-8">
+<div class="flex border-b border-slate-200 dark:border-slate-800 gap-8 overflow-x-auto">
+<button class="flex flex-col items-center border-b-2 border-primary text-primary pb-3 px-2 transition-all">
+<span class="text-base font-bold whitespace-nowrap">Upcoming Events</span>
+</button>
+<button class="flex flex-col items-center border-b-2 border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 pb-3 px-2 transition-all">
+<span class="text-base font-medium whitespace-nowrap">Past Events</span>
+</button>
+<button class="flex flex-col items-center border-b-2 border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-200 pb-3 px-2 transition-all">
+<span class="text-base font-medium whitespace-nowrap">Global Calendar</span>
+</button>
+</div>
+</div>
+<!-- Upcoming Featured Event -->
+<section class="mb-12">
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold mb-6">Featured Event</h2>
+<div class="group relative overflow-hidden rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+<div class="flex flex-col lg:flex-row">
+<div class="w-full lg:w-3/5 aspect-video lg:aspect-auto overflow-hidden">
+<img alt="Professional conference hall with modern lighting" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern conference hall with large presentation screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC77rZqTis4VJoA_2S334k6ia8RJiaNbfdFhyF1gtqlOkuRWcvtjrPYlqc0PvVlP144VntrJCnzRqsR55d3upe1QsWPE1ITMRh1ZyefZOrnT6e7B_RNHkPw6Qy_CkjJFE_L69O0HOWQGzcc69J7tHPh0rq1n7ZBstquP71rxFaj4lRcPP00HhMrZNnbG6lmDVAfyfgvLDttyM29qWEMW7BItiMF84KXXMh2crmkooVielS02lK4vnCEZglRGJfiHUL7qRfsHRbxu7s"/>
+</div>
+<div class="w-full lg:w-2/5 p-8 flex flex-col justify-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-primary/10 text-primary mb-4 tracking-wider uppercase">Leadership Summit</span>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">JCI Global Leadership Summit 2024</h3>
+<div class="space-y-3 mb-6">
+<div class="flex items-center gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-xl">calendar_today</span>
+<span class="text-sm">October 24, 2024 • 09:00 AM - 05:00 PM</span>
+</div>
+<div class="flex items-center gap-3 text-slate-600 dark:text-slate-400">
+<span class="material-symbols-outlined text-primary text-xl">location_on</span>
+<span class="text-sm" data-location="City Convention Center, Metropolis">City Convention Center, Metropolis</span>
+</div>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-8">
+                                        Join over 500 young leaders for a transformative day featuring international keynote speakers, hands-on leadership workshops, and high-level networking sessions designed to sharpen your impact.
+                                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors flex-1 text-center">Register Now</button>
+<button class="bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-bold py-3 px-6 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Events Grid -->
+<section class="mb-16">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold">More Upcoming Events</h2>
+<button class="text-primary font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+                                View all <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="relative h-48">
+<img alt="Team collaborating around a table" class="w-full h-full object-cover" data-alt="Team brainstorming in a modern office space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt9UmpBNst2tuG3nC_xR_hEv3bB2uLdBGAcEqwZOXFMWj3nIMh5nRkriB-5epCbnaRfc8Bc9pss0pLmgVwGUb43p_8g8tItvpFtv0YU0eEbK3tuus8S4hp_awt8TgVfxLGv5G-nENVbSVZfjScAtxwL09WfXRhmgvCzmMlUazmDQ7tTMgC4DvTLR-lcGnHasDFAXsHGP8yRPpocJ4Wxg7UyLX3ZIvtDaszgZqivL084Q4s0hiVi-rokgQzi-zCgVRda_s5w8VTSqg"/>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded shadow-sm text-center">
+<p class="text-primary font-bold text-lg leading-tight">15</p>
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-tighter">NOV</p>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<p class="text-primary text-xs font-bold mb-2 tracking-widest uppercase">Community</p>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white mb-3 line-clamp-2">Green Urban Initiative: Community Tree Planting</h4>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-lg">schedule</span>
+<span>08:00 AM - 12:00 PM</span>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-lg">place</span>
+<span data-location="Riverside Park">Riverside Park</span>
+</div>
+</div>
+<div class="mt-auto">
+<button class="w-full border border-primary text-primary hover:bg-primary/5 font-bold py-2.5 rounded-lg transition-colors">View Details</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="relative h-48">
+<img alt="Networking mixer event" class="w-full h-full object-cover" data-alt="People networking at a professional corporate mixer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAMUSUnP38zguMzz0dDz7ytp1rGCM8gw7w_a4PnBP_wbHXCK_ACtAUQdKipPjtPcasNsiAQQCjmtNvxNyW7i1EAOG0zHf4e5KDAVy_R4nWAMh4Wy8FjB9zCm8RziWxaQtAT8H-ihxX2JjnN5I0TLRNSIRE2QjZVS4yzQtGkgUgsw6F86budmRjANxEUqD8EoOWpLKLHIzr0FYwjfGTn-2h3lqkXLpn387LZtaLlhllVxa5aCkgiLREWfTJ9hQ4H9Fx8Corq_Dru5s"/>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded shadow-sm text-center">
+<p class="text-primary font-bold text-lg leading-tight">22</p>
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-tighter">NOV</p>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<p class="text-primary text-xs font-bold mb-2 tracking-widest uppercase">Networking</p>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white mb-3 line-clamp-2">Monthly Business Mixer &amp; Mentorship Speed-Dating</h4>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-lg">schedule</span>
+<span>06:30 PM - 09:30 PM</span>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-lg">place</span>
+<span data-location="Skyline Lounge">Skyline Lounge</span>
+</div>
+</div>
+<div class="mt-auto">
+<button class="w-full border border-primary text-primary hover:bg-primary/5 font-bold py-2.5 rounded-lg transition-colors">View Details</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col">
+<div class="relative h-48">
+<img alt="Workshop presentation" class="w-full h-full object-cover" data-alt="Instructor leading a professional digital skills workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo_cwJ65V6J0hyhjAWVdQfPyrykChxUG8djl8QBITok-pmGyh1EC18kI1zVmWIajTzqJGC8JgwcT5NZaw6g8H43888-DCk611b6-dR43p4vvxNHcGaKdG9wUwJpuVEwoFz2ZtNvkETkFLlqdDaIw-FeXpL3L2l68TNKrA9-JW-niJTG1lP-DKgg0d66OISUHEJZa4iMuwezxUgST7Yh9kjeil3Cu1Jn7OMe-N9KdUOZtnjNvrl-ZwPEZQ9OMMKFvdGLGeGMhMT5vU"/>
+<div class="absolute top-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm px-3 py-1 rounded shadow-sm text-center">
+<p class="text-primary font-bold text-lg leading-tight">05</p>
+<p class="text-slate-500 text-[10px] font-bold uppercase tracking-tighter">DEC</p>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-1">
+<p class="text-primary text-xs font-bold mb-2 tracking-widest uppercase">Skills</p>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white mb-3 line-clamp-2">Public Speaking Mastery Workshop (Tier 1)</h4>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-lg">schedule</span>
+<span>10:00 AM - 04:00 PM</span>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm">
+<span class="material-symbols-outlined text-lg">place</span>
+<span data-location="Innovation Hub">Innovation Hub</span>
+</div>
+</div>
+<div class="mt-auto">
+<button class="w-full border border-primary text-primary hover:bg-primary/5 font-bold py-2.5 rounded-lg transition-colors">View Details</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Past Events Archive -->
+<section class="border-t border-slate-200 dark:border-slate-800 pt-16 mb-16">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+<div>
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold">Event Archive</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-1">Look back at our past initiatives and achievements.</p>
+</div>
+<div class="flex gap-2">
+<button class="px-4 py-2 bg-slate-200 dark:bg-slate-800 rounded-lg text-sm font-medium">Year: 2024</button>
+<button class="px-4 py-2 bg-slate-100 dark:bg-slate-800 rounded-lg text-sm font-medium">All Types</button>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Archive Row 1 -->
+<div class="flex flex-col sm:flex-row items-center gap-6 p-4 rounded-xl hover:bg-white dark:hover:bg-slate-900 hover:shadow-sm border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all group">
+<div class="w-full sm:w-32 h-20 rounded-lg overflow-hidden shrink-0">
+<img alt="Community gathering" class="w-full h-full object-cover" data-alt="Diverse group of people gathering for a social event" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPwtmZ59c7jV54l2oD72BHPmnZDzYqLi4Z0i82tZEhXj71VajvNJaNjiodwkUjDhAslaHwgn6b0w9L8ZfvCh1n4iqIyeQpC_QgqVE6fm07-O7sHR2XOfzK2emQQOw5djA6BQpZsff_vgsFilMrUWFmP-Ihj_7ZiBzAiFPG9QoOEPfh71VH1isfUXq58WKywpevWnEuzT7B2Zm6vCJl8IhMgNux_pKaBqZ-4RoStJ-tW_tMhXN1U-bJ0V7yXPKpTZ6u5EVGNSElDwQ"/>
+</div>
+<div class="flex-1">
+<h5 class="text-slate-900 dark:text-white font-bold group-hover:text-primary transition-colors">Annual Gala Dinner 2023</h5>
+<p class="text-slate-500 text-sm">Dec 15, 2023 • Grand Ballroom Hotel</p>
+</div>
+<div class="flex gap-3 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-4 py-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary font-medium text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">collections</span> Gallery
+                                    </button>
+<button class="flex-1 sm:flex-none px-4 py-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary font-medium text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">article</span> Report
+                                    </button>
+</div>
+</div>
+<!-- Archive Row 2 -->
+<div class="flex flex-col sm:flex-row items-center gap-6 p-4 rounded-xl hover:bg-white dark:hover:bg-slate-900 hover:shadow-sm border border-transparent hover:border-slate-200 dark:hover:border-slate-800 transition-all group">
+<div class="w-full sm:w-32 h-20 rounded-lg overflow-hidden shrink-0">
+<img alt="Youth training session" class="w-full h-full object-cover" data-alt="Young people participating in a tech training session" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7J-8DXO3BNuFoy2JX5WGBwca1Al4gNYumIMiW-uU4cYNQLn8J2cuysj7Oz6uSg_Iqjb7dcVQ9pqCFsnwnzbiAUBunD6gsZ89PxTZa3iX0DyBi1kunbPZHLq4qPGNWma3zy65xhzmGREHB7959fBHCSX7KcKCeAZ_6kYQJ-BED5nRLshlr40wncnN28NKieKF7vhYUTaWsar0PsvjR11qDMog0w4mRlLnUYXrKGjfki79EDqz4eBhf1R4TGOHp6X2SNxf4utBszDo"/>
+</div>
+<div class="flex-1">
+<h5 class="text-slate-900 dark:text-white font-bold group-hover:text-primary transition-colors">Digital Literacy Bootcamp for Youth</h5>
+<p class="text-slate-500 text-sm">Nov 02, 2023 • Tech Library</p>
+</div>
+<div class="flex gap-3 w-full sm:w-auto">
+<button class="flex-1 sm:flex-none px-4 py-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary font-medium text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">collections</span> Gallery
+                                    </button>
+<button class="flex-1 sm:flex-none px-4 py-2 text-slate-600 dark:text-slate-400 hover:text-primary dark:hover:text-primary font-medium text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">article</span> Report
+                                    </button>
+</div>
+</div>
+</div>
+<div class="mt-10 text-center">
+<button class="px-8 py-3 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+                                Load More History
+                            </button>
+</div>
+</section>
+</div>
+</main>
+<div id="footer-placeholder"></div>
+<!-- Footer -->
+<footer style="display:none" class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 py-12 px-6 md:px-20">
+<div class="max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-3 text-primary mb-6">
+<div class="size-6">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold">JCI Local Chapter</h2>
+</div>
+<p class="text-slate-500 dark:text-slate-400 leading-relaxed mb-6 max-w-sm">
+                            JCI is a worldwide federation of young leaders and entrepreneurs with over 200,000 active members in over 100 countries.
+                        </p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm" href="#">Our Board</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm" href="#">Become a Member</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm" href="#">Annual Report</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-sm" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-slate-900 dark:text-white mb-6">Newsletter</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm mb-4">Stay updated on our next big event.</p>
+<div class="flex flex-col gap-2">
+<input class="bg-slate-100 dark:bg-slate-800 border-none rounded-lg px-4 py-2 text-sm focus:ring-primary" placeholder="Email address"/>
+<button class="bg-primary text-white font-bold py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="max-w-[1100px] mx-auto mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 text-center">
+<p class="text-slate-400 text-xs">© 2024 JCI Local Chapter. All rights reserved. Developed for active citizens.</p>
+</div>
+</footer>
+</div>
+</div>
+<script src="components.js"></script>
+</body></html>

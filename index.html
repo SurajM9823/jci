@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#195de6",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>JCI Local Chapter - Home</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<div id="nav-placeholder"></div>
+<header style="display:none" class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md px-6 md:px-10 lg:px-40 py-3">
+<div class="flex items-center justify-between max-w-[1200px] mx-auto">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<h1 class="text-primary text-lg font-bold leading-none tracking-tight">JCI</h1>
+<span class="text-[10px] uppercase tracking-widest font-semibold text-slate-500">Local Chapter</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="#">Events</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-slate-700 dark:text-slate-200 text-sm font-medium hover:text-primary transition-colors" href="#">Join Us</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-white text-sm font-bold px-5 py-2 rounded-lg hover:bg-primary/90 transition-all shadow-md shadow-primary/20">
+                        Contact Us
+                    </button>
+<button class="md:hidden text-slate-700 dark:text-slate-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<section class="relative w-full h-[500px] overflow-hidden bg-slate-900">
+<div class="absolute inset-0">
+<img alt="Hero Background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYgPuwDp6A28P1KDD_jpddcwu9GkfHqYZgsQGuHFzDQWQDMsiPPM-xJb3v7E4PxCKUeaoRyiwiZ6UyOGEpkDxJ6TDOhLUO2u0QhjOrbJ_KubnkzeWBnv_Mx0apcfZaEV-Cgcl4CRhfStpmMlDUSydN_sAYzny0s2HwlYVk-oP31MEAyTsmYs4NHfPpzVAnH2_u70xIhCYIXpOusFGXUMT2vTsaKMkoKzJCjk6CHFrknLO8NSVqtLamLcEDqJfz3Xetlj74QT6tdjM"/>
+<div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent"></div>
+</div>
+<div class="relative max-w-[1200px] mx-auto h-full flex items-center px-6 lg:px-40">
+<div class="max-w-2xl">
+<h2 class="text-white text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+            Empowering Young Leaders to Create <span class="text-primary">Positive Change</span>
+</h2>
+<p class="text-slate-300 text-base mb-8 max-w-lg">
+            Join our network of young active citizens in Belbari, Morang.
+        </p>
+<div class="flex flex-wrap gap-5">
+<button class="bg-primary text-white font-bold py-4 px-10 rounded-xl hover:shadow-lg hover:shadow-primary/30 hover:-translate-y-1 transition-all duration-300">Get Started</button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 font-bold py-4 px-10 rounded-xl hover:bg-white/20 transition-all">Watch Our Story</button>
+</div>
+</div>
+</div>
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
+<div class="w-10 h-1 bg-primary rounded-full"></div>
+<div class="w-10 h-1 bg-white/20 rounded-full"></div>
+<div class="w-10 h-1 bg-white/20 rounded-full"></div>
+</div>
+</section>
+<section class="py-24 px-6 lg:px-40 max-w-[1200px] mx-auto">
+<div class="bg-white dark:bg-slate-800/50 rounded-2xl p-8 md:p-12 shadow-xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-800">
+<div class="flex flex-col md:flex-row gap-10 items-center">
+<div class="relative flex-shrink-0">
+<div class="w-48 h-48 rounded-2xl overflow-hidden border-4 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of the local JCI president" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALC5uBqa3d6qeWb8CYBJw-M-8DR84xAZp71v3wqYPqU0VhAQyDAvlI1r9ROhL_NlL2l6z0OYUZPXYKOvnBJHl5kBJ1RIgZM-hQwfCoyAYdpZrsTK5YP1bjg9slWm_XVUybr4CipmEYEPgiieivryatWiWmMg35X5pi8OdY9ZCxOidGzQlgfZ-v54jMHjBnX_VdNDIxcHuvwymVKFoVhBXYlyQ9gyWgvCki4_z8LyknVK-p3PSWIza74AeQ8lMW6wzdlklZOpI-UQM"/>
+</div>
+<div class="absolute -bottom-4 -right-4 bg-primary text-white p-3 rounded-xl shadow-lg">
+<span class="material-symbols-outlined text-2xl">format_quote</span>
+</div>
+</div>
+<div class="flex-1">
+<h3 class="text-primary font-bold text-sm uppercase mb-2">President's Message</h3>
+<h2 class="text-3xl font-bold mb-4">Leading with Purpose</h2>
+<p class="text-slate-600 dark:text-slate-300 italic text-lg leading-relaxed mb-6">
+                                "Welcome to our local JCI family. In a world that is constantly evolving, our mission remains clear: to provide the bridge between vision and action. Together, we are not just dreaming of a better community; we are building it through leadership, service, and collaboration."
+                            </p>
+<div>
+<p class="font-bold text-slate-900 dark:text-white text-xl">Alexander Thompson</p>
+<p class="text-slate-500 dark:text-slate-400 font-medium">2024 Local President</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-slate-50 dark:bg-slate-900/50">
+<div class="max-w-[1200px] mx-auto px-6 lg:px-40">
+<div class="flex items-center justify-between mb-10">
+<div>
+<h2 class="text-3xl font-bold">Latest Highlights</h2>
+<div class="w-12 h-1 bg-primary mt-2"></div>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 hover:underline" href="#">
+                            View All Announcements <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-slate-100 dark:border-slate-700 hover:-translate-y-1">
+<div class="h-56 overflow-hidden relative">
+<img alt="Community" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVIMW2ffHurs8SR53lSM14pr2S0uX8yIL2lTGILASUWDnLZMd6n0zyoi042TY8wIWI1SSs6mAaAqV3G_qwKbrHIgSTifegEcoms1kk99Itg3jFJprakAgpU8UHgyt--DtHyN2hYVKPvcOnRKG8H18aKCscLItBPHaV4Km_cdHMh0_u6_JoYcqdL-COfyfcB5iWowdwbkY1LbxCrFP-XRtv6rcFiC6Lj_Y_dXhCCLbel24wRELAfeVVjv6jgabr15qiQvT1mW1iqWs"/>
+<div class="absolute top-4 left-4">
+<span class="text-[11px] font-bold text-white uppercase bg-primary px-3 py-1.5 rounded-full shadow-lg">Community</span>
+</div>
+</div>
+<div class="p-8">
+<h4 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2">Clean City Initiative 2024</h4>
+<p class="text-slate-500 dark:text-slate-400 text-base mb-6 line-clamp-2">Join us this Saturday for our annual city-wide cleaning project starting at the Central Park.</p>
+<button class="text-primary font-bold flex items-center gap-2 group/btn">
+            Read More 
+            <span class="material-symbols-outlined text-base group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-slate-100 dark:border-slate-700 hover:-translate-y-1">
+<div class="h-56 overflow-hidden relative">
+<img alt="Professional Development" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwXAczZYfsssphqN2qI2WID1Pbx5D5DjcoGdMRSpaz6zUoNIqyuIy7QcYOWk7XHpZZZBRaCsq80LzXHfws7E9WPWL3gtID-B6JvMbxcbsit0lul5lRLHTOfii2mHCecinvkt_qgvybA-iBhH2buN9sYzAmUXcBVs3hMgBRa1duFzEDB6TbcAIEG6C4YP5PO9nSnFvLaGxYXuP0s1zzfRLipmpYBsNukPOMxdtTI6n61-54Rtzh2mK5pLU19by7TpyKSzHhZ7Vfcuk"/>
+<div class="absolute top-4 left-4">
+<span class="text-[11px] font-bold text-white uppercase bg-primary px-3 py-1.5 rounded-full shadow-lg">Professional Development</span>
+</div>
+</div>
+<div class="p-8">
+<h4 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2">Leadership Masterclass</h4>
+<p class="text-slate-500 dark:text-slate-400 text-base mb-6 line-clamp-2">Exclusively for members: A session on strategic management and impactful communication.</p>
+<button class="text-primary font-bold flex items-center gap-2 group/btn">
+            Read More 
+            <span class="material-symbols-outlined text-base group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group border border-slate-100 dark:border-slate-700 hover:-translate-y-1">
+<div class="h-56 overflow-hidden relative">
+<img alt="Networking" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwiIpTsCHENzJ51NOjE9Fz3eLWOg5sT0cV_8nJJQf54lRfEC1ZuEOrUhg5sU-FRKlWNo_r_uU-_vrx5PF161uG_e-GkKdvUAC9aoxeVMQMeMwYaKZkb82PNWw7aXwBL-ejyGIfSc8PE_QOaMosB9D8ffq90YrjGvgqTavpwkX7qM-kZQ_vKUVJubAJ8MhU0p0x7AYkc3e51AsbWWfVU1iolw1QPgcaxzQ0LHj6ZpnXxdW7MJBrQUOWCFLr5yYvbJcrMGwjN1pIDZM"/>
+<div class="absolute top-4 left-4">
+<span class="text-[11px] font-bold text-white uppercase bg-primary px-3 py-1.5 rounded-full shadow-lg">Networking</span>
+</div>
+</div>
+<div class="p-8">
+<h4 class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors line-clamp-2">Monthly Meetup</h4>
+<p class="text-slate-500 dark:text-slate-400 text-base mb-6 line-clamp-2">Connect with like-minded individuals at our next social mixer happening at the Grand Plaza.</p>
+<button class="text-primary font-bold flex items-center gap-2 group/btn">
+            Read More 
+            <span class="material-symbols-outlined text-base group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 px-6 lg:px-40 max-w-[1200px] mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-extrabold mb-4">Our Core Philosophy</h2>
+<p class="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">Driven by values that prioritize human dignity and the development of the individual to better serve humanity.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group p-8 rounded-2xl bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 hover:border-primary transition-all shadow-lg shadow-slate-200/20">
+<div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">track_changes</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
+                            To provide development opportunities that empower young people to create positive change. We focus on building skills and providing platforms for active citizenship.
+                        </p>
+</div>
+<div class="group p-8 rounded-2xl bg-white dark:bg-slate-800 border-2 border-slate-100 dark:border-slate-700 hover:border-primary transition-all shadow-lg shadow-slate-200/20">
+<div class="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all">
+<span class="material-symbols-outlined text-3xl">visibility</span>
+</div>
+<h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
+                            To be the leading global network of young active citizens. We aim to foster a world where young leaders are at the forefront of driving sustainable impact.
+                        </p>
+</div>
+</div>
+<div class="mt-16 bg-primary text-white rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-8">
+<div>
+<h3 class="text-2xl font-bold mb-2">Ready to make an impact?</h3>
+<p class="text-white/80">Join our local chapter and start your leadership journey today.</p>
+</div>
+<button class="bg-white text-primary font-bold px-8 py-3 rounded-xl hover:bg-slate-100 transition-colors whitespace-nowrap">
+                        Become a Member
+                    </button>
+</div>
+</section>
+</main>
+<div id="footer-placeholder"></div>
+<footer style="display:none" class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-16 pb-8 px-6 lg:px-40">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 42.4379C4 42.4379 14.0962 36.0744 24 41.1692C35.0664 46.8624 44 42.2078 44 42.2078L44 7.01134C44 7.01134 35.068 11.6577 24.0031 5.96913C14.0971 0.876274 4 7.27094 4 7.27094L4 42.4379Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold">JCI Local Chapter</h2>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Part of Junior Chamber International, we are a nonprofit organization of young active citizens aged 18 to 40 who are dedicated to creating positive change in our communities.
+                    </p>
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">alternate_email</span>
+</a>
+<a class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-6">Quick Links</h4>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Upcoming Events</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Our Projects</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Board of Directors</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Membership Portal</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Resources</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-6">Legal</h4>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Constitution</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Settings</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-slate-900 dark:text-white font-bold mb-6">Contact</h4>
+<ul class="space-y-4 text-sm text-slate-500 dark:text-slate-400">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-lg">location_on</span>
+<span>123 Leadership Way, City Center, Main State</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-lg">mail</span>
+<span>hello@jcichapter.org</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary text-lg">call</span>
+<span>+1 (555) 000-1234</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-500 dark:text-slate-400 text-xs">
+                    © 2024 JCI Local Chapter. All Rights Reserved. Junior Chamber International.
+                </p>
+<div class="text-xs text-slate-400 italic">
+                    Developed for Young Active Citizens
+                </div>
+</div>
+</footer>
+</div>
+<script src="components.js"></script>
+</body></html>
